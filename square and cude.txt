@@ -1,0 +1,19 @@
+class square:
+    def __init__(self,s):
+        self.s=s
+    def sq(self):
+        return self.s**2
+class cube:
+    def __init__(self,s):
+        self.s=s
+    def cb(self):
+        return self.s**3
+class addition(square,cube):
+    def __init__(self,a):
+        square.__init__(self,a)
+        cube.__init__(self,a)
+x=int(input())
+c=addition(x)
+print("square",c.sq())
+print("cube",c.cb())
+print("addition",c.sq()+c.cb())
